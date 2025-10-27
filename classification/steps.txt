@@ -1,0 +1,33 @@
+Ubuntu Version: 24.04
+⇛ Classification Phase
+
+The dataset organization was conducted in a bifurcated manner:
+
+A conglomerate of non–monkeypox imagery was consolidated within a singular directory.
+
+A distinct repository was allocated exclusively for monkeypox-related data.
+
+Subsequent to this segregation, data augmentation techniques were systematically applied to enhance dataset diversity and mitigate overfitting tendencies. Thereafter, a CSV manifest file was algorithmically generated to catalog the metadata corresponding to each specimen.
+
+⇛ Segmentation Phase
+
+Image Annotation Tool: LabelMe, duly installed on the Ubuntu 24.04 environment.
+
+Authentic and high–fidelity JPEG images were meticulously procured from a multitude of credible sources and subsequently renamed in a consistent sequential schema (e.g., mkp_001.jpg, mkp_002.jpg, and so forth).
+Consequently, each JPEG image was annotated via LabelMe, producing JSON-formatted annotation files. Utilizing a bespoke Python script, these JSON files were transmuted into binary segmentation masks — images rendered strictly in monochromatic (black-and-white) form to represent object regions.
+
+⇛ MASK R-CNN Preparation Workflow
+
+Initially, the dataset — encompassing masks, JSON annotations, and raw images — must be partitioned into two subsets: training (80%) and validation (20%).
+
+Execute the split script to perform this division automatically.
+
+Subsequently, the JSON annotations must be converted into the COCO format, a standardized representation requisite for Mask R-CNN training.
+
+Execute the json2COCO utility to facilitate this transformation.
+
+Upon completion of these stages, the dataset is rendered fully compatible and primed for model training.
+
+⇛ Data Augmentation Library
+
+A specialized library employed for augmentation procedures: Albumentations — a highly versatile and computationally efficient framework designed for advanced image transformation operations.
