@@ -92,6 +92,10 @@ All scripts were developed and tested on **Ubuntu 24.04**, but they are **fully 
 
 Each script begins with a list of import statements, allowing users to identify any missing libraries during execution.
 
+Code and Data Availability:
+
+The source code and data used in this study are publicly available at GitHub and archived in Zenodo under DOI: https://doi.org/10.5281/zenodo.17451367
+
 ---
 
 ## Requirements
@@ -186,4 +190,5 @@ References
 [36] Muhamad Ahmed. (2022). Monkey-Pox PATIENTS Dataset. Kaggle.
 [37] Jewel Md. (2025). Mpox Classification Augmented Images. Kaggle.
 [38] Jewel Md. (2025). Mpox Lesion Segmentation Dataset (Suitable for U-Net). Kaggle.
+
 Bala, Diponkor; Hossain, Md Shamim (2023). Monkeypox Skin Images Dataset (MSID), Mendeley Data, V6, doi: 10.17632/r9bfpnvyxr.6.
